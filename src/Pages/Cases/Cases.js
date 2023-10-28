@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../../Components/Header'
 
 function Cases() {
   return (
-    <div>Cases</div>
+    <div>
+      <Header pageTitle="All Cases" name="Cases" />
+    </div>
   )
 }
 
