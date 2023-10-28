@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Pages/Layout";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
+import NoPage from "./Pages/Nopage";
+import About from "./Pages/About";
+import Attorney from "./Pages/Attorney";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Blog with sub pages
+import Blog from "./Pages/Blog/Blog";
+import BlogCategory from "./Pages/Blog/BlogCategory";
+import BlogDetails from "./Pages/Blog/BlogDetails";
+
+//Practice with sub page
+import PracticeArea from "./Pages/PracticeAreas/PracticeArea";
+import PracticeDetails from "./Pages/PracticeAreas/PracticeDetails";
+
+//Cases with sub page
+import Cases from "./Pages/Cases/Cases";
+import CaseDetails from "./Pages/Cases/CaseDetails";
+
+export default function App() {
+	return (
+		<BrowserRouter>
+			<Routes>
+				{/* Layout with navbar */}
+				<Route path="/" element={<Layout />}>
+					{/* Pages */}
+					<Route index element={<Home />} />
+					<Route path="about" element={<About />} />
+					<Route path="attorney" element={<Attorney />} />
+					<Route path="practice" element={<PracticeArea />} />
+					<Route path="practiceDetails" element={<PracticeDetails />} />
+					<Route path="cases" element={<Cases />} />
+					<Route path="caseDetails" element={<CaseDetails />} />
+					<Route path="blog" element={<Blog />} />
+					<Route path="blogDetails" element={<BlogDetails />} />
+					<Route path="blogCategory" element={<BlogCategory />} />
+					<Route path="contact" element={<Contact />} />
+					<Route path="*" element={<NoPage />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
