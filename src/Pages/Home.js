@@ -1,10 +1,10 @@
 import React from 'react';
-import { sectionStyles } from '../Styles/HeaderStyle';
+import { heroSectionStyles } from '../Styles/HeaderStyle';
 
 function Home() {
 
   return (
-    <div style={sectionStyles} className='bg-primary -ml-20'>
+    <div style={heroSectionStyles} className='w-full'>
       <section >
         {/* Content for this section */}
       </section>
