@@ -19,6 +19,13 @@ body {
   transform-origin: top;
   transform: translateY(-100%);
 }
+/* Navbar.css */
+.show {
+  display: block !important;
+  transition: all;
+  transition-duration: 300s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 @layer base {
   /* body {
@@ -69,4 +76,41 @@ body {
   .link-text {
     @apply h4 hover:text-primary cursor-pointer transition-all duration-300  ease-in-out
   }
+
+  .w-2xl {
+    @apply w-[1200px];
+  }
+
+  .w-xl {
+    @apply w-[1020px];
+  }
+
+  .w-lg {
+    @apply w-[940px];
+  }
+  
+  .w-md {
+    @apply w-[720px];
+  }
+
+  .w-sm {
+    @apply w-[540px];
+  }
+
+  .w-xs {
+    @apply w-[420px];
+  }
+
+  .w-2xs {
+    @apply w-[320px];
+  }
+
+  .w-3xs {
+    @apply w-[240px];
+  }
+
+  .w-4xs {
+    @apply w-[180px];
+  }
+
 }
