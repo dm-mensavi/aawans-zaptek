@@ -19,6 +19,10 @@ const Navbar = () => {
 	};
 
 	return (
+		<div className='w-full absolute z-10'>
+		<div className='w-full mt-7 mx-auto'>
+			{/* Your Navbar Content Goes Here */}
+
 		<nav className="flex bg-white lg:w-[90%] xl:w-[85%] mx-auto rounded-md space-x-8 shadow-lg items-center justify-between p-5">
 			<Link to="/">
 				<img src={logo} alt="logo" className="w-36" />
@@ -43,7 +47,10 @@ const Navbar = () => {
 				Appointment Now
 			</Link>
 		</nav>
+		</div>
+	</div>
 	);
 };
 
 export default Navbar;
+
