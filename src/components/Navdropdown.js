@@ -40,7 +40,7 @@ const Navdropdown = () => {
         )}
       </div>
       {isOpen && (
-        <div className="absolute py-3 space-y-2 w-48 mt-8  bg-white rounded-lg shadow-md">
+        <div className="absolute py-3 space-y-2 w-48 mt-8  bg-white rounded-b-lg shadow-md">
           <Link
             to="/attorney"
             className="block px-4 py-2 link-text text-lg"
