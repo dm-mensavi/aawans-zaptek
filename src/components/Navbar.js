@@ -23,7 +23,7 @@ const Navbar = () => {
 		<div className='w-full mt-7 mx-auto'>
 			{/* Your Navbar Content Goes Here */}
 
-		<nav className="flex bg-white lg:w-[90%] xl:w-[85%] mx-auto rounded-md space-x-8 shadow-lg items-center justify-between p-5">
+		<nav className="flex bg-white w-[95%] lg:w-[90%] xl:w-[80%] mx-auto rounded-md space-x-8 shadow-lg items-center justify-between p-5">
 			<Link to="/">
 				<img src={logo} alt="logo" className="w-36" />
 			</Link>
