@@ -3,6 +3,8 @@ import React from "react";
 import { sectionStyles } from "../Styles/HeaderStyle";
 import element1 from "../public/breadcrumb-element-2.svg";
 import element2 from "../public/breadcrumb-element-1.svg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 function Header({ pageTitle, name }) {
 	return (
@@ -20,12 +22,22 @@ function Header({ pageTitle, name }) {
 				</div>
 			</div>
 			{/* bread crumps elements*/}
-			<div className="absolute hidden lg:inline top-[210px] right-[10%]">
+			<motion.div  
+						variants={fadeIn("left", 1, 0.3)}
+						initial="hidden"
+						animate="show"
+						exit="hidden"
+			className="absolute hidden lg:inline top-[210px] right-[10%]">
 				<img src={element1} alt="element1" className="w-50" />
-			</div>
-			<div className="absolute hidden lg:inline bottom-[100px] left-[10%]">
+			</motion.div>
+			<motion.div 
+						variants={fadeIn("right", 1, 0.3)}
+						initial="hidden"
+						animate="show"
+						exit="hidden"
+			className="absolute hidden lg:inline bottom-[100px] left-[10%]">
 				<img src={element2} alt="element1" className="w-50" />
-			</div>
+			</motion.div>
 		</div>
 	);
 }

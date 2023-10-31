@@ -10,7 +10,6 @@ export const heroSectionStyles = {
   backgroundRepeat: 'no-repeat, no-repeat',
   backgroundAttachment: 'fixed, fixed',
   width: '100%',
-  // height: '953px',
 };
 
 export const sectionStyles = {
@@ -22,5 +21,4 @@ export const sectionStyles = {
   backgroundRepeat: 'no-repeat, no-repeat',
   backgroundAttachment: 'fixed, fixed',
   width: '100%',
-  //height: '500px',
 };
