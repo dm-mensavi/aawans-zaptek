@@ -136,7 +136,7 @@ const OurAttorney = () => {
 						</div>
 					</div>
 					<figure className="md:md:order-1">
-						<img src={members} alt="our attornies" />
+						<img src={members} alt="our attorneys" />
 					</figure>
 				</div>
 			</div>
