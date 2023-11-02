@@ -1,12 +1,16 @@
-import React from 'react'
-import Header from '../../components/Header'
+import React from "react";
+import { Helmet } from "react-helmet";
+import Header from "../../components/Header";
 
 function Blog() {
-  return (
-    <div>
-      <Header pageTitle="Blog Page" name="Blog" />
-    </div>
-  )
+	return (
+		<div>
+			<Helmet>
+				<title>Blog Post - AawAans</title>
+			</Helmet>
+			<Header pageTitle="Blog Page" name="Blog" />
+		</div>
+	);
 }
 
-export default Blog
+export default Blog;

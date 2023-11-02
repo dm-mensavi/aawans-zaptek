@@ -9,6 +9,7 @@ import reviewer2 from "../public/reviewer2.jpg";
 import bgImg from "../public/testimonial-bg-shape.svg";
 import aboutImg from "../public/about-image.jpg";
 import checkIcon from "../public/check-icon.svg";
+import { Helmet } from "react-helmet";
 
 const services = [
 	"Immigration Laws",
@@ -248,6 +249,9 @@ function About() {
 
 	return (
 		<div>
+      <Helmet>
+				<title>About - AawAans</title>
+			</Helmet>
 			<Header pageTitle="About Page" name="About" />
 
 			<div className="about-page-body md:px-10 ">

@@ -5,7 +5,7 @@ function Nopage() {
 	return (
 		<div>
 			<Header pageTitle={"No Page"} name={"Page not found"} />
-			<div className="flex flex-col py-10 items-center">
+			<div className="flex flex-col py-10 items-center bg-[#f9f7f3]">
 				<h1 className="h1">404</h1>
 				<h3 className="text-2xl ">
 					{" "}
