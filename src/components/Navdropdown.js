@@ -24,7 +24,7 @@ const Navdropdown = () => {
   };
 
   return (
-    <div className="relative flex-col">
+    <div className="relative flex-col z-30">
       <div
         className={`flex relative flex-row items-center link-text text-lg ${
           isOpen ? "text-black" : ""

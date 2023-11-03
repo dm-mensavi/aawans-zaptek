@@ -31,10 +31,12 @@ export default function App() {
 					<Route path="about" element={<About />} />
 					<Route path="attorney" element={<Attorney />} />
 					<Route path="practice" element={<PracticeArea />} />
-					<Route path="practiceDetails" element={<PracticeDetails />} />
+					<Route path="practice/:id" element={<PracticeDetails />} />
 					<Route path="cases" element={<Cases />} />
+					<Route path="cases/:id" element={<CaseDetails />} />
 					<Route path="caseDetails" element={<CaseDetails />} />
 					<Route path="blog" element={<Blog />} />
+					<Route path="blog/:id" element={<BlogDetails />} />
 					<Route path="blogDetails" element={<BlogDetails />} />
 					<Route path="blogCategory" element={<BlogCategory />} />
 					<Route path="contact" element={<Contact />} />

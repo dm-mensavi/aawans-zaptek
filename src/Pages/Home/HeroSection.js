@@ -23,6 +23,7 @@ function HeroSection() {
 						className="xl:text-8xl md:text-7xl text-5xl font-serif font-bold pt-32 mb-10">
 						Best Legal Solutions.
 					</motion.h1>
+					
 					<motion.p
 						variants={fadeIn("up", 0.7, 0.5)}
 						initial="offscreen"
@@ -32,6 +33,7 @@ function HeroSection() {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</motion.p>
+					
 					<motion.div
 						variants={fadeIn("up", 0.7, 0.7)}
 						initial="offscreen"
