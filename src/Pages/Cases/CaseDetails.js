@@ -59,41 +59,21 @@ const data=[
   }
 ]
 function CaseDetail() {
-  const [isHovered,setIsHovered]=useState(false);
-
-  const handleMouseOn=()=>{
-    setIsHovered(true)
-  };
-
-  const handleMouseOff=()=>{
-    setIsHovered(false)
-  }
+  
   return (
-    <div
-    className="flex"
-    onMouseEnter={handleMouseOn}
-    onMouseLeave={handleMouseOff}
-  >
-    
-   <Link className=' w-80 h-80 md:w-60 md:h-60 flex lg:w-96 lg:h-96 bg-cover bg-center relative'  style={{ backgroundImage: `url(${case1})` }}>
-   
-    {isHovered && (
-      <div className='absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent rounded-2xl '>
-        <p className="text-3xl text-white font-bold">Trademark Infringement</p>
-        <p className='text-[#b68c5a] text-2xl'>Intellectual Property</p>
-      </div>
-    )}
-   </Link>
-   <Link className=' w-80 h-80 md:w-60 md:h-60 flex lg:w-96 lg:h-96 bg-cover bg-center relative'  style={{ backgroundImage: `url(${case1})` }}>
-    <div  className='absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent rounded-2xl '>
-    {isHovered && (
-      <div>
-        <p className="text-3xl text-white font-bold">Trademark Infringement</p>
-        <p className='text-[#b68c5a] text-2xl'>Intellectual Property</p>
-      </div>
-    )}
+    <div className="lg:pt-40 flex justify-center">
+    <div className='grid grid-cols-3 gap-12'>
+      {data.map((cases)=>(
+         <Link className='relative'>
+         <img src={cases.pic} alt="case"
+           className="w-80 rounded-2xl h-80" />
+         <div className="absolute top-0 left-0 w-80 flex flex-col justify-self-end opacity-0 rounded-xl align-bottom text-center transition-opacity duration-300 hover:opacity-100 inset-0 bg-gradient-to-t from-gray-900 ">
+         <p className='text-white text-3xl pt-52'>{cases.title} </p>
+         <p className='text-2xl text-primary'>{cases.moreInfo} </p>
+         </div>
+         </Link>
+      ))}
     </div>
-   </Link>
   </div>
   )
 }
