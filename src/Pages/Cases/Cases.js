@@ -14,7 +14,7 @@ function Cases() {
 			<div className="lg:pt-40 flex justify-center">
     <div className='grid grid-cols-3 gap-12'>
       {caseData.map((cases)=>(
-         <Link className='relative'>
+         <Link className='relative' to={`/cases/${cases.id}`}>
          <img src={cases.image} alt="case"
            className="w-80 rounded-2xl h-80" />
          <div className="absolute top-0 left-0 w-80 flex flex-col justify-self-end opacity-0 rounded-xl align-bottom text-center transition-opacity duration-300 hover:opacity-100 inset-0 bg-gradient-to-t from-gray-900 ">
