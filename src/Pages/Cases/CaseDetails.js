@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import case1 from '../../public/cases-details-img-1.jpg';
 import case2 from '../../public/cases-details-img-2.jpg';
 import case3 from '../../public/cases-details-img-3.jpg';
