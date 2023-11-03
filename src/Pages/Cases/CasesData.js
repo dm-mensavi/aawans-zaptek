@@ -1,3 +1,12 @@
+import case1 from '../../public/cases-details-img-1.jpg';
+import case2 from '../../public/cases-details-img-2.jpg';
+import case3 from '../../public/cases-details-img-3.jpg';
+import case4 from '../../public/cases-details-img-4.jpg';
+import case5 from '../../public/cases-details-img-5.jpg';
+import case6 from '../../public/cases-details-img-6.jpg';
+import case7 from '../../public/cases-details-img-7.jpg';
+import case8 from '../../public/cases-details-img-8.jpg';
+
 export const caseData = [
 	{
 		id: 1,
@@ -6,7 +15,7 @@ export const caseData = [
 		caseName: "Trademark Infringement",
 		Time: "04 Months",
 		Lawyer: "Bryan Howard",
-		image: "cases-details-img-1",
+		image: case1,
 	},
 	{
 		id: 2,
@@ -15,7 +24,7 @@ export const caseData = [
 		caseName: "Patent Infringement",
 		Time: "05 Months",
 		Lawyer: "Bryan Howard",
-		image: "cases-details-img-2",
+		image: case2,
 	},
 	{
 		id: 3,
@@ -24,7 +33,7 @@ export const caseData = [
 		caseName: "Breach of Warranty",
 		Time: "07 Months",
 		Lawyer: "Christine Lee",
-		image: "cases-details-img-3",
+		image: case3,
 	},
 	{
 		id: 4,
@@ -33,7 +42,7 @@ export const caseData = [
 		caseName: "False Advertising",
 		Time: "03 Months",
 		Lawyer: "Christine Lee",
-		image: "cases-details-img-4",
+		image: case4,
 	},
 	{
 		id: 5,
@@ -42,7 +51,7 @@ export const caseData = [
 		caseName: "Drug Possession",
 		Time: "o4 Months",
 		Lawyer: "Aubrey Nguyen",
-		image: "cases-details-img-5",
+		image: case5,
 	},
 	{
 		id: 6,
@@ -51,7 +60,7 @@ export const caseData = [
 		caseName: "Fraud",
 		Time: "05 Months",
 		Lawyer: "Aubrey Nguyen",
-		image: "cases-details-img-6",
+		image: case6,
 	},
 	{
 		id: 7,
@@ -60,7 +69,7 @@ export const caseData = [
 		caseName: "Defamation",
 		Time: "08 Months",
 		Lawyer: "Neal Houston",
-		image: "cases-details-img-7",
+		image: case7,
 	},
 	{
 		id: 8,
@@ -69,6 +78,6 @@ export const caseData = [
 		caseName: "Workplace Injury",
 		Time: "06 Months",
 		Lawyer: "Neal Houston",
-		image: "cases-details-img-8",
+		image: case8,
 	},
 ];
