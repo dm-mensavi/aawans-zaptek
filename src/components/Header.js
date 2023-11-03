@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
+import { Link } from "react-router-dom";
 import { sectionStyles } from "../Styles/HeaderStyle";
 import element1 from "../public/breadcrumb-element-2.svg";
 import element2 from "../public/breadcrumb-element-1.svg";
@@ -17,7 +18,7 @@ function Header({ pageTitle, name }) {
 					<div className="flex">
 						<h2>
 							{" "}
-							<span className="mr-2">Home</span> //
+							<Link to='/' className="mr-2 hover:text-primary cursor-pointer transition-all duration-300  ease-in-out ">Home</Link> //
 							<span className="text-primary ml-2"> {name}</span>
 						</h2>
 					</div>

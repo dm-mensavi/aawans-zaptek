@@ -2,6 +2,8 @@ import TestimonialCard from "../../components/TestimonialCard";
 import reviewer1 from "../../public/reviewer1.jpg";
 import reviewer2 from "../../public/reviewer2.jpg";
 import bgImg from "../../public/testimonial-bg-shape.svg";
+import { fadeIn } from "../../variants";
+import { motion } from "framer-motion";
 
 const testimonies = [
 	{
@@ -42,20 +44,32 @@ const ClientsTestimonial = () => {
 			</figure>
 			<div className="section-content px-4 sm:px-14 md:px-24">
 				<div className="section-header text-center">
-					<h2 className="px-7 py-2 bg-primary inline-block text-white rounded-md">
+					<motion.h2
+						variants={fadeIn("up", 0.5, 0)}
+						initial="offscreen"
+						whileInView="onscreen"
+						viewport={{ once: true, amount: 0 }}
+						className="px-7 py-2 bg-primary inline-block text-white rounded-md"
+					>
 						Clients Testimonial
-					</h2>
+					</motion.h2>
 
-					<h3 className="mt-10 mb-[20px] font-serif text-4xl leading-10 font-bold lg:text-4xl lg:mt-12 lg:mb-[26px]">
+					<motion.h3 
+						variants={fadeIn("up", 0.5, 0)}
+						initial="offscreen"
+						whileInView="onscreen"
+						viewport={{ once: true, amount: 0 }}
+						className="mt-10 mb-[20px] font-serif text-3xl leading-10 font-bold lg:text-4xl lg:mt-12 lg:mb-[26px]"
+					>
 						What Clients Say About Us
-					</h3>
+					</motion.h3>
 				</div>
 
 				<div className="section-content mt-20">
 					<div className="cards-container">
 						<div className="flex gap-8 flex-wrap justify-center items-center">
 							{testimonies.map((testimony) => {
-								return <TestimonialCard testimony={testimony} />;
+								return <TestimonialCard testimony={testimony} key={testimony.authur}/>;
 							})}
 						</div>
 					</div>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import AboutIntro from "./About/AboutIntro";
-import OurAttorney from "./About/OurAttorney";
-import BlogSubscription from "./About/BlogSubscription";
-import ClientsTestimonial from "./About/ClientsTestimonial";
-
+import Header from "../../components/Header";
+import AboutIntro from "./AboutIntro";
+import OurAttorney from "./OurAttorney";
+import BlogSubscription from "./BlogSubscription";
+import ClientsTestimonial from "./ClientsTestimonial";
+import { Helmet } from "react-helmet";
 
 function About() {
 	const [subForm, setSubForm] = useState({
@@ -21,6 +21,9 @@ function About() {
 
 	return (
 		<div>
+			<Helmet>
+				<title>About - AawAans</title>
+			</Helmet>
 			<Header pageTitle="About Page" name="About" />
 
 			<div className="about-page-body md:px-10 ">
