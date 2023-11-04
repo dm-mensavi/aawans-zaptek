@@ -33,7 +33,7 @@ function BlogDetails() {
 			<Header pageTitle="Blog Details" name="Blog" />
 
 			{/* Your content and design goes here */}
-			<div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-between items-start w-full gap-10 mt-32">
+			<div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-between items-start w-full gap-10 mt-32 px-[5%]">
 				<div className="lg:max-w-[40%] ">
 					<div className="flex justify-between items-center shadow-lg w-10/12 p-5">
 						<input placeholder="Search here..." />
