@@ -82,7 +82,7 @@ body {
   }
 
   .general-margin {
-    @apply pt-5 px-4 justify-center md:pt-6 md:px-10 lg:px-20 xl:mx-auto max-w-[1900px]
+    @apply  w-[95%] lg:w-[90%] xl:w-[80%] mx-auto 
   }
 
   .w-2xl {
