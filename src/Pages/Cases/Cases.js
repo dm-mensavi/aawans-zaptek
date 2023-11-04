@@ -11,8 +11,8 @@ function Cases() {
 				<title>Cases - AawAans</title>
 			</Helmet>
 			<Header pageTitle="All Cases" name="Cases" />
-			<div className="lg:pt-40 flex justify-center">
-    <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-3 gap-12'>
+			<div className="lg:pt-40 sm:pt-20 pt-20 pb-20 lg:pb-20 sm:pb-20 flex justify-center">
+    <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-12'>
       {caseData.map((cases)=>(
          <Link className='relative' to={`/cases/${cases.id}`}>
          <img src={cases.image} alt="case"
