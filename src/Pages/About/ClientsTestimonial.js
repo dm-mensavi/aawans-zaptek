@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useEffect, useState } from "react";
+import "../../Styles/swiperstyles.css"
 
 const testimonies = [
 	{
@@ -41,6 +43,31 @@ const testimonies = [
 ]
 
 const ClientsTestimonial = () => {
+	const [preview, setPreview] = useState(1)
+	/* const [animationProp, setAnimationProp] = useState({
+		preview: 1,
+		
+	}) */
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth >= 1000) {
+			  setPreview(2);
+			} else {
+			  setPreview(1);
+			}
+		};
+
+		handleResize()
+
+		window.addEventListener('resize', handleResize)
+
+		// Clean up the event listener when the component unmounts
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, [])
+
 	return (
 		<section className="client-testimonial py-14 md:py-36 relative">
 			<figure className="absolute top-0 -left-10 -z-10 opacity-60">
@@ -74,13 +101,13 @@ const ClientsTestimonial = () => {
 						<Swiper 
 							modules={[Pagination]}
 							spaceBetween={0}
-							slidesPerView={2}
+							slidesPerView={preview}
 							pagination={{ clickable: true }}
 							className="flex gap-8 flex-wrap justify-center items-center">
 							{
 								testimonies.map((testimony) => {
 									return (
-										<SwiperSlide className="py-10 px-10" key={testimony.authur}>
+										<SwiperSlide className="py-3 px-3 sm:py-10 sm:px-10" key={testimony.authur}>
 											<TestimonialCard testimony={testimony}/>
 										</SwiperSlide>
 									)

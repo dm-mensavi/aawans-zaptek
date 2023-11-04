@@ -57,7 +57,7 @@ const AboutIntro = () => {
 								aenean.
 							</motion.p>
 
-							<div className="mt-7 text-base grid gap-5 sm:grid-cols-2">
+							<div className="mt-7 grid gap-5 sm:grid-cols-2">
 								{services.map((service, index) => (
 									<motion.div
 										variants={fadeIn("up", 0.5, 0)}
