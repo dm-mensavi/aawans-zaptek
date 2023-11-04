@@ -1,4 +1,3 @@
-import React from "react";
 import Icon1 from "../../public/practice-icon-1.png";
 import Icon2 from "../../public/practice-icon-2.png";
 import Icon3 from "../../public/practice-icon-3.png";

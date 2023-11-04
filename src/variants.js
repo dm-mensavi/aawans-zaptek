@@ -23,3 +23,29 @@ export const fadeIn = (direction,duration ,delay) => {
       },
     },
   }};
+
+  export const zoomIn = ( duration, delay) => {
+    return {
+      hidden: {
+        opacity: 0.3,
+        scale: 0.5,
+        transition: {
+          type: 'tween',
+          duration: duration,
+          delay: delay,
+          ease: [0.25, 0.6, 0.3, 0.8],
+        },
+      },
+      show: {
+        opacity: 1,
+        scale: 1, 
+        transition: {
+          type: 'tween',
+          duration: duration,
+          delay: delay,
+          ease: [0.25, 0.25, 0.25, 0.75],
+        },
+      },
+    };
+  };
+  
