@@ -1,5 +1,6 @@
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
+import dots1 from "../../public/newsletter-dot.svg"
 
 const BlogSubscription = (props) => {
 	const buttonAnim = {
@@ -11,8 +12,8 @@ const BlogSubscription = (props) => {
 
 	return (
 		<section className="blog-subscription py-14 md:py-24 bg-primary md:-mx-10">
-			<div className="section-content flex justify-center items-center">
-				<div className="px-4 sm:px-14 md:px-24 max-w-3xl">
+			<div className="section-content relative flex justify-center items-center">
+				<div className="px-4 sm:px-14 md:px-24 max-w-3xl z-10">
 					<div className="section-header text-center text-white ">
 						<div>
 							<motion.h2 
@@ -74,6 +75,14 @@ const BlogSubscription = (props) => {
 						</motion.div>
 					</form>
 				</div>
+
+				<figure className="absolute top-20 right-5 w-48 sm:w-60 md:w-auto md:right-26 lg:right-48">
+					<img src={dots1} alt="dots 1" />
+				</figure>
+
+				<figure className="absolute top-20 left-5 w-48 sm:w-60 md:w-auto md:left-26 lg:left-48">
+					<img src={dots1} alt="dots 1" />
+				</figure>
 			</div>
 		</section>
 	);

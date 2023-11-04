@@ -4,6 +4,10 @@ import reviewer2 from "../../public/reviewer2.jpg";
 import bgImg from "../../public/testimonial-bg-shape.svg";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Pagination} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const testimonies = [
 	{
@@ -67,11 +71,22 @@ const ClientsTestimonial = () => {
 
 				<div className="section-content mt-20">
 					<div className="cards-container">
-						<div className="flex gap-8 flex-wrap justify-center items-center">
-							{testimonies.map((testimony) => {
-								return <TestimonialCard testimony={testimony} key={testimony.authur}/>;
-							})}
-						</div>
+						<Swiper 
+							modules={[Pagination]}
+							spaceBetween={0}
+							slidesPerView={2}
+							pagination={{ clickable: true }}
+							className="flex gap-8 flex-wrap justify-center items-center">
+							{
+								testimonies.map((testimony) => {
+									return (
+										<SwiperSlide className="py-10 px-10" key={testimony.authur}>
+											<TestimonialCard testimony={testimony}/>
+										</SwiperSlide>
+									)
+								})
+							}
+						</Swiper>
 					</div>
 				</div>
 			</div>
