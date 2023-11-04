@@ -15,9 +15,9 @@ const services = [
 const AboutIntro = () => {
 	return (
 		<section className="about-intro py-14 md:py-36">
-			<div className="section-content px-4 sm:px-14 md:px-24">
-				<div className="grid grid-cols-1 gap-28 lg:grid-cols-2 lg:items-start">
-					<div className="lg:order-2">
+			<div className="section-content px-4 md:px-0 lg:px-14">
+				<div className="grid grid-cols-1 gap-20 lg:gap-32 md:grid-cols-2 md:items-start">
+					<div className="md:order-2">
 						<div className="section-header">
 							<motion.h2 
 								variants={fadeIn("up", 0.5, 0)}
@@ -57,7 +57,7 @@ const AboutIntro = () => {
 								aenean.
 							</motion.p>
 
-							<div className="mt-7 grid gap-5 sm:grid-cols-2">
+							<div className="mt-7 grid gap-5 lg:grid-cols-2">
 								{services.map((service, index) => (
 									<motion.div
 										variants={fadeIn("up", 0.5, 0)}
@@ -76,13 +76,13 @@ const AboutIntro = () => {
 							</div>
 						</div>
 					</div>
-					<figure className="lg:order-1 lg:relative max-w-xl">
+					<figure className="md:order-1 md:relative max-w-xl">
 						<motion.div 
 							variants={fadeIn("right", 0.5, 0)}
 							initial="offscreen"
 							whileInView="onscreen"
 							viewport={{ once: true, amount: 0 }}
-							className="hidden lg:block absolute border-[2px] border-primary w-full h-[80%] left-10 top-[140px] rounded-lg -z-10"
+							className="hidden md:block absolute border-[2px] border-primary w-full h-full left-10 top-10 rounded-lg -z-10"
 						></motion.div>
 						<img
 							src={aboutImg}
