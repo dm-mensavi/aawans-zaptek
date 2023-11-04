@@ -2,13 +2,13 @@ import quoteMark from '../public/quote.svg'
 
 const TestimonialCard = (props) => {
     return (
-        <div className='card p-10 lg:p-16 shadow-custom bg-white max-w-[460px]'>
+        <div className='card px-3 py-14 sm:p-10 rounded-xl text-base md:text-lg lg:p-16 shadow-custom bg-white max-w-[460px]'>
             <div className='card-content font-serif'>
                 <figure className='flex justify-center items-center'>
                     <img src={quoteMark} alt='quotation mark' />
                 </figure>
 
-                <p className='text-lg text-secondaryLight text-center mt-8'>
+                <p className='text-secondaryLight text-center mt-8'>
                 {props.testimony.testimony}
                 </p>
 
@@ -17,7 +17,7 @@ const TestimonialCard = (props) => {
                     {props.testimony.image}
                 </figure>
                 <div>
-                    <h3 className='text-lg font-bold'>
+                    <h3 className='font-bold'>
                     {props.testimony.authur}
                     </h3>
 

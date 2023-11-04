@@ -47,7 +47,7 @@ const BlogSubscription = (props) => {
 							initial="offscreen"
 							whileInView="onscreen"
 							viewport={{ once: true, amount: 0.3 }}
-							className="sm:pl-8 sm:pr-2 sm:py-2 sm:rounded-lg sm:bg-white sm:grid sm:grid-cols-5 	sm:items-center sm:gap-4"
+							className="sm:pl-8 sm:pr-[5px] sm:py-[5px] sm:rounded-lg sm:bg-white sm:grid sm:grid-cols-5 	sm:items-center sm:gap-8"
 						>
 							<input
 								type="email"
@@ -65,7 +65,7 @@ const BlogSubscription = (props) => {
 								viewport={{ once: true, amount: 1 }}
 								className="sm:col-span-2 sm:mt-0">
 								<button
-									className="w-full bg-black px-5 py-4 text-white rounded-lg mt-5
+									className="w-full bg-black px-5 py-[11px] text-white rounded-lg mt-5
                  					hover:bg-primary transition-colors duration-300
                   					sm:mt-0"
 								>

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const OurAttorney = () => {
 	return (
 		<section className="our-attorney py-14 md:py-36">
-			<div className="section-content px-4 sm:px-14 md:px-24">
-				<div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+			<div className="section-content px-4 sm:px-10 lg:px-14">
+				<div className="grid grid-cols-1 gap-10 items-center md:gap-12 md:grid-cols-2">
 					<div className="md:order-2">
 						<div className="section-header">
 							<motion.h2
