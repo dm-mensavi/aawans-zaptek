@@ -4,7 +4,7 @@ import Layout from "./Pages/Layout";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact";
 import NoPage from "./Pages/Nopage";
-import { About } from "./Pages/About";
+import About from "./Pages/About/About";
 import Attorney from "./Pages/Attorney";
 
 //Blog with sub pages
