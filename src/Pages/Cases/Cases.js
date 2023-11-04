@@ -12,7 +12,7 @@ function Cases() {
 			</Helmet>
 			<Header pageTitle="All Cases" name="Cases" />
 			<div className="lg:pt-40 flex justify-center">
-    <div className='grid grid-cols-3 gap-12'>
+    <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-3 gap-12'>
       {caseData.map((cases)=>(
          <Link className='relative' to={`/cases/${cases.id}`}>
          <img src={cases.image} alt="case"
