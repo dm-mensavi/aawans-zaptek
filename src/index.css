@@ -62,7 +62,7 @@ body {
   }
 
   .btn-secondary {
-    @apply bg-primaryLight font-semibold h-max w-max rounded-lg px-7 py-4 flex
+    @apply bg-[#f6f6f6] font-semibold h-max w-max rounded-lg px-7 py-4 flex
     sm:flex-col cursor-pointer hover:bg-primary hover:text-white
     transition-all duration-300  ease-in-out
   } 

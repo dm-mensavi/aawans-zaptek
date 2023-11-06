@@ -1,50 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Header from "../../components/Header";
-// import { BlogData } from "./BlogData";
+import { BlogData } from "./BlogData";
 import { Link } from "react-router-dom";
-import BlogCategory from "./BlogCategory";
-import BlogDetails from './BlogDetails'
-import BlogInfo from './BlogInfo'
-import {data} from './Data'
+
 
 function Blog() {
-	const cards = data.map((item)=>
-	<Link key={item.id} to={`/blog/${item.id}`}>
-	<BlogCategory key={item.id} title={item.title} picture={item.picture} br={item.br}/>
-	</Link>
-	)
+	const postsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
 
-	// console.log(cards)
-	return (
-		<div  classname='bg-red-500'>
-			<Helmet>
-				<title>Blog Post - AawAans</title>
-			</Helmet>
-			<Header pageTitle="Blog Page" name="Blog" />
+  // Calculate total number of pages
+  const totalPages = Math.ceil(BlogData.length / postsPerPage);
 
-			{/* Refactor this code to design the cards */}
-			{/* <div className="h4 flex flex-col items-center">
-				{BlogData.map((item) => (
-					<Link key={item.id} to={`/blog/${item.id}`}>
-						<div>{item.title}</div>
-						<img
-							width={300}
-							height={300}
-							src={require(`../../public/${item.image}.jpg`)}
-							alt="not found"
-						/>
-					</Link>
-				))}
-			</div> */}
+  // Calculate the index range for the current page
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+	
+  const currentPosts = BlogData.slice(startIndex, endIndex);
+	
 
-				<div className='lg:grid md:grid sm:flex sm:flex-col sm:justify-center sm:items-center lg:grid-cols-3 md:grid-cols-2 gap-5 '>
-				{cards}
-				{/* <BlogCategory /> */}
-					{/* <BlogInfo /> */}
-				</div>
-		</div>
-	);
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      scrollToTop(); 
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      scrollToTop(); 
+    }
+  };
+
+
+  return (
+    <div className="my-32">
+      <Helmet>
+        <title>Blog Post - AawAans</title>
+      </Helmet>
+      <Header pageTitle="Blog Page" name="Blog" />
+
+      <div className="lg:grid md:grid sm:flex sm:flex-col sm:justify-center sm:items-center lg:grid-cols-3 md:grid-cols-2 gap-5 general-margin">
+        {currentPosts.map((item, index) => (
+          <Link key={index} to={`/blog/${item.id}`}>
+            <div className="bg-white rounded-lg w-fit p-3 shadow-md my-5 max-h-[100%] hover:shadow-lg pb-10">
+              <div className="relative w-fit flex flex-col justify-center items-center">
+                <img src={require(`../../public/${item.image}.jpg`)} alt={item.title} />
+                <h1 className="bg-primary w-fit text-white p-1 px-2 rounded-lg relative z-10 -mt-5 text-center">
+                  {item.date}
+                </h1>
+                <h1 className="font-semibold text-xl text-center my-10 ">{item.title}</h1>
+                <button className="btn-secondary"> Read More</button>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+			<div className="flex justify-center mt-10">
+        <button
+          className="btn-secondary mr-3"
+          onClick={prevPage}
+          disabled={currentPage === 1}
+        >
+          Previous Page
+        </button>
+        <button
+          className="btn-secondary"
+          onClick={nextPage}
+          disabled={currentPage === totalPages}
+        >
+          Next Page
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Blog;
+
+
+
+
