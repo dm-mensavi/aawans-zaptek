@@ -2,7 +2,7 @@ import quoteMark from '../public/quote.svg'
 
 const TestimonialCard = (props) => {
     return (
-        <div className='card px-3 py-14 sm:p-10 rounded-xl text-base md:text-lg lg:p-16 shadow-custom bg-white max-w-[460px]'>
+        <div className='card px-3 py-14 sm:p-10 rounded-xl text-base md:text-lg lg:p-16 shadow-custom bg-white'>
             <div className='card-content font-serif'>
                 <figure className='flex justify-center items-center'>
                     <img src={quoteMark} alt='quotation mark' />
