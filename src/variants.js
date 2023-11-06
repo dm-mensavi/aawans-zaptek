@@ -32,8 +32,9 @@ export const flipX = () => {
       scaleX: 1,
       transition: {
         type: 'tween',
-        duration: 0.5,
-        delay: 0,
+        duration: 0.2,
+        delay: 0.1,
+				ease: [0.25, 0.5, 0.5, 0.75],
       },
     }
   }};
