@@ -15,7 +15,7 @@ export const data = [
     {
         id: 3,
         picture: '../../../assets/blog1.jpg',
-        title: 'Protecting Your Rights with Breach of ',
+        title: 'Protecting Your Rights with Breach of Warranty',
         br:'Warranty'
     },
     {
