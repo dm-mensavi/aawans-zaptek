@@ -23,6 +23,20 @@ export const fadeIn = (direction,duration ,delay) => {
       },
     },
   }};
+  
+export const flipX = () => {
+  return {
+    offscreen: { opacity: 0, scaleX: 0 },
+    onscreen: {
+      opacity: 1,
+      scaleX: 1,
+      transition: {
+        type: 'tween',
+        duration: 0.5,
+        delay: 0,
+      },
+    }
+  }};
 
   export const zoomIn = ( duration, delay) => {
     return {
