@@ -32,9 +32,12 @@ function CaseDetails() {
 				<img
 					width={700}
 					height={700}
-					src={require(`../../public/${caseItem.image}.jpg`)}
-					alt="not found"
+					src={caseItem.image}
+					alt={caseItem.title}
 				/>
+			<h1>{caseItem.title}</h1>
+			<p>{caseItem.time}</p>
+			<p>{caseItem.Lawyer}</p>
 			</div>
 		</div>
 	);

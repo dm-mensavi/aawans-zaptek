@@ -3,6 +3,9 @@ import Header from "../../components/Header";
 import { Helmet } from "react-helmet";
 import { caseData } from "./CasesData";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { flipX } from "../../variants";
+import "../../Styles/Cases.css";
 
 function Cases() {
 	return (
@@ -11,22 +14,31 @@ function Cases() {
 				<title>Cases - AawAans</title>
 			</Helmet>
 			<Header pageTitle="All Cases" name="Cases" />
-
-			{/* Refactor this code to design the cards */}
-			<div className="lg:pt-40 flex justify-center">
-				<div className="grid grid-cols-3 gap-12">
-					{caseData.map((item, index) => (
-						<Link key={index} to={`/cases/${item.id}`}  className="relative">
+			<div className="lg:pt-40 sm:pt-20 pt-20 pb-20 lg:pb-20 sm:pb-20 flex justify-center my-16 general-margin">
+				<div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-10 ">
+					{caseData.map((cases) => (
+						<motion.div
+							variants={flipX()}
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true, amount: 0 }}
+							className="relative card-container">
 							<img
-								src={require(`../../public/${item.image}.jpg`)}
-								alt={item.title}
-								className="rounded-2xl w-96 h-80"
+								src={cases.image}
+								alt={cases.title}
+								className="w-full lg:w-96 rounded-2xl h-80"
 							/>
-							<div className="absolute top-0 left-0 w-96 flex flex-col justify-self-end opacity-0 rounded-xl align-bottom text-center transition-opacity duration-300 hover:opacity-100 inset-0 bg-gradient-to-t from-gray-900 ">
-								<p className="text-white text-3xl pt-52">{item.title} </p>
-								<p className="text-2xl text-primary">{item.subtitle} </p>
-							</div>
-						</Link>
+							<Link
+								to={`/cases/${cases.id}`}
+								className="text-container text-center rounded-2xl pb-20">
+								<p className="text-white font-serif font-semibold text-3xl pt-44 header-text">
+									{cases.title}
+								</p>
+								<p className="text-xl mt-3  text-primary subheading-text">
+									{cases.subtitle}
+								</p>
+							</Link>
+						</motion.div>
 					))}
 				</div>
 			</div>
