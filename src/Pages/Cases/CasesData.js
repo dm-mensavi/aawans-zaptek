@@ -10,7 +10,7 @@ import case8 from '../../public/cases-details-img-8.jpg';
 export const caseData = [
 	{
 		id: 1,
-		title: "Trademark Infringement",
+		title: "Trade Infringement",
 		subtitle: "Intellectual Property",
 		caseName: "Trademark Infringement",
 		Time: "04 Months",

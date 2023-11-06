@@ -33,8 +33,11 @@ function CaseDetails() {
 					width={700}
 					height={700}
 					src={caseItem.image}
-					alt="not found"
+					alt={caseItem.title}
 				/>
+			<h1>{caseItem.title}</h1>
+			<p>{caseItem.time}</p>
+			<p>{caseItem.Lawyer}</p>
 			</div>
 		</div>
 	);
