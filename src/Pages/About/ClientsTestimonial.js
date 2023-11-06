@@ -73,7 +73,8 @@ const ClientsTestimonial = () => {
 			<figure className="absolute top-0 -left-10 -z-10 opacity-60">
 				<img src={bgImg} alt="bg img" />
 			</figure>
-			<div className="section-content px-4 sm:px-14 md:px-24">
+			<div className="flex justify-center items-center">
+			<div className="max-w-6xl section-content px-4 sm:px-14 md:px-24">
 				<div className="section-header text-center">
 					<motion.h2
 						variants={fadeIn("up", 0.5, 0)}
@@ -116,6 +117,7 @@ const ClientsTestimonial = () => {
 						</Swiper>
 					</div>
 				</div>
+			</div>
 			</div>
 		</section>
 	);

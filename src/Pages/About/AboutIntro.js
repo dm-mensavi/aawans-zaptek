@@ -15,8 +15,8 @@ const services = [
 const AboutIntro = () => {
 	return (
 		<section className="about-intro py-14 md:py-36">
-			<div className="section-content px-4 md:px-0 lg:px-14">
-				<div className="grid grid-cols-1 gap-20 lg:gap-32 md:grid-cols-2 md:items-start">
+			<div className="section-content flex justify-center items-center px-4 md:px-0 lg:px-14">
+				<div className="max-w-6xl grid grid-cols-1 gap-20 lg:gap-32 md:grid-cols-2 md:items-start">
 					<div className="md:order-2">
 						<div className="section-header">
 							<motion.h2 
@@ -76,13 +76,13 @@ const AboutIntro = () => {
 							</div>
 						</div>
 					</div>
-					<figure className="md:order-1 md:relative max-w-xl">
+					<figure className="md:order-1 md:relative md:max-w-[480px]">
 						<motion.div 
 							variants={fadeIn("right", 0.5, 0)}
 							initial="offscreen"
 							whileInView="onscreen"
 							viewport={{ once: true, amount: 0 }}
-							className="hidden md:block absolute border-[2px] border-primary w-full h-full left-10 top-10 rounded-lg -z-10"
+							className="hidden md:block absolute border-[2px] border-primary w-full h-[90%]  rounded-lg -z-10 top-[15%] left-[7%]"
 						></motion.div>
 						<img
 							src={aboutImg}
