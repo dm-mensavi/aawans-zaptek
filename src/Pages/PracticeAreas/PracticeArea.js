@@ -19,18 +19,16 @@ function PracticeArea() {
 				<div className="flex justify-center items-center">
 					<div className="h4 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl">
 						{practiceAreaData.map((item) => (
-							<motion.div 
+							<motion.div
 								variants={flipX()}
 								initial="offscreen"
 								whileInView="onscreen"
 								viewport={{ once: true, amount: 0 }}
-								className="shadow-custom px-5 pt-5 pb-14 rounded-lg"
-							>
-								<Link 
-								className="flex flex-col justify-center items-center"
-								key={item.id} 
-								to={`/practice/${item.id}`}
-								>
+								key={item.id}
+								className="shadow-custom px-5 pt-5 pb-14 rounded-lg">
+								<div
+									className="flex flex-col justify-center items-center"
+									to={`/practice/${item.id}`}>
 									<div className="relative mb-14 w-full">
 										<img
 											src={require(`../../public/${item.image}.jpg`)}
@@ -40,32 +38,30 @@ function PracticeArea() {
 
 										{/* Icons absolute -bottom-10 left-[35%]*/}
 										<figure className="">
-											<img 
-												src={item.icon} 
-												alt={item.title} 
+											<img
+												src={item.icon}
+												alt={item.title}
 												className="absolute -bottom-10 left-[35%] border-white border-4 border-spacing-3 z-10 w-24 h-24 rounded-full"
 											/>
 										</figure>
 									</div>
-									
 
 									<div className="text-center">
-										<h3>
+										<Link to={`/practice/${item.id}`} className="link-text">
 											{item.title}
-										</h3>
+										</Link>
 
 										<p className="font-normal text-[20px] text-[#565656] font-sans">
 											{item.description}
 										</p>
 									</div>
 
-									<button 
-										className="font-semibold text-lg mt-8 bg-primaryLighter py-2 px-8 rounded-lg font-sans hover:bg-primary hover:text-white transition duration-200"
-									>
+									<Link
+										to={`/practice/${item.id}`}
+										className="font-semibold text-lg mt-8 bg-primaryLighter py-2 px-8 rounded-lg font-sans hover:bg-primary hover:text-white transition duration-200">
 										Read More
-									</button>
-
-								</Link>
+									</Link>
+								</div>
 							</motion.div>
 						))}
 					</div>
