@@ -11,6 +11,8 @@ const BlogSubscription = (props) => {
 	}
 
 	return (
+		<div className={props.class}>
+
 		<section className="blog-subscription py-14 md:py-24 bg-primary md:-mx-10">
 			<div className="section-content relative flex justify-center items-center">
 				<div className="px-4 sm:px-14 md:px-24 max-w-3xl z-10">
@@ -85,6 +87,7 @@ const BlogSubscription = (props) => {
 				</figure>
 			</div>
 		</section>
+		</div>
 	);
 };
 
