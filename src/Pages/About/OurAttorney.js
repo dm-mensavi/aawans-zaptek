@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import members from "../../public/members.png";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
@@ -10,7 +11,7 @@ const OurAttorney = () => {
 					<div className="md:order-2">
 						<div className="section-header">
 							<motion.h2
-                                variants={fadeIn("up", 0.5, 0)}
+                                variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
@@ -20,7 +21,7 @@ const OurAttorney = () => {
 							</motion.h2>
 
 							<motion.h3 
-                                variants={fadeIn("up", 0.5, 0)}
+                                variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
@@ -32,7 +33,7 @@ const OurAttorney = () => {
 
 						<div className="text-secondaryLight text-lg">
 							<motion.p 
-                                variants={fadeIn("up", 0.5, 0)}
+                                variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
@@ -43,7 +44,7 @@ const OurAttorney = () => {
 							</motion.p>
 
 							<motion.p 
-                                variants={fadeIn("up", 0.5, 0)}
+                                variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
@@ -54,13 +55,15 @@ const OurAttorney = () => {
 							</motion.p>
 
 							<motion.button 
-                                variants={fadeIn("up", 0.5, 0)}
+                                variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
                                 className="mt-7 px-8 py-3 text-black bg-[#f6f6f6] rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-300"
                             >
+								<Link to="/attorney">
 								Meet All Attorney
+								</Link>
 							</motion.button>
 						</div>
 					</div>

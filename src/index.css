@@ -68,7 +68,7 @@ body {
   } 
 
   .btn-primary {
-    @apply bg-primary/90 text-white font-semibold h-max w-max rounded-lg px-6 py-4 flex
+    @apply bg-primary/90 text-white font-semibold h-max w-max rounded-lg px-6 py-3 flex
     sm:flex-col cursor-pointer hover:bg-yellow-700
     transition-all duration-300  ease-in-out
   } 

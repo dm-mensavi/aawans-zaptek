@@ -17,7 +17,7 @@ const BlogSubscription = (props) => {
 					<div className="section-header text-center text-white ">
 						<div>
 							<motion.h2 
-								variants={fadeIn("up", 0.5, 0)}
+								variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0.3 }}
@@ -27,7 +27,7 @@ const BlogSubscription = (props) => {
 							</motion.h2>
 
 							<motion.p 
-								variants={fadeIn("up", 0.5, 0)}
+								variants={fadeIn("up", 0.7, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0.3 }}
@@ -43,7 +43,7 @@ const BlogSubscription = (props) => {
 						className="mt-14 md:mt-20 text-lg"
 					>
 						<motion.div 
-							variants={fadeIn("up", 0.5, 0)}
+							variants={fadeIn("up", 0.7, 0)}
 							initial="offscreen"
 							whileInView="onscreen"
 							viewport={{ once: true, amount: 0.3 }}

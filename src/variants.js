@@ -1,9 +1,9 @@
 export const fadeIn = (direction,duration ,delay) => {
   return {
     offscreen: {
-      y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0, //changed from 80 to 50
+      y: direction === 'up' ? 70 : direction === 'down' ? -70 : 0, //changed from 80 to 50
       opacity: 0,
-      x: direction === 'left' ? 50 : direction === 'right' ? -50 : 0, //changed from 80 to 50
+      x: direction === 'left' ? 70 : direction === 'right' ? -70 : 0, //changed from 80 to 50
       transition: {
         type: 'tween',
         duration: duration,
