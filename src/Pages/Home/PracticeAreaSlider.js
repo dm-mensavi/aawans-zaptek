@@ -46,16 +46,13 @@ function PracticeAreaSlider() {
 					},
 				}}
 				spaceBetween={50}
-				navigation={{
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				}}
+				navigation={true}
 				loop={true}
 				modules={[Navigation, Pagination, A11y]}
-				className="flex w-[85%] h-full swiper ">
+				className="flex w-[85%] h-[90%] swiper absolute">
 				{practiceAreaData.map((item) => (
 					<SwiperSlide
-						className=" shadow-lg rounded-lg pb-10 "
+						className=" shadow-lg rounded-lg pb-10 mb-32"
 						key={item.id}>
 						<motion.div
 							variants={flipX()}
@@ -99,10 +96,11 @@ function PracticeAreaSlider() {
 						</motion.div>
 					</SwiperSlide>
 				))}
-				<div className="flex justify-center my-10">
+				{/* Custom buttons */}
+				{/* <div className="flex justify-center my-10">
 					<button
 						onClick={() => swiper.slidePrev()}
-						className=" hover:bg-primaryLight  cursor-pointer transition-all duration-300  ease-in-out rounded-full p-5 mx-3 border-2">
+						className=" hover:bg-primaryLight cursor-pointer transition-all duration-300  ease-in-out rounded-full p-5 mx-3 border-2">
 						<AiOutlineLeft size={15} />
 					</button>
 					<button
@@ -110,7 +108,7 @@ function PracticeAreaSlider() {
 						className=" hover:bg-primaryLight  cursor-pointer transition-all duration-300  ease-in-out rounded-full p-5 mx-3 border-2">
 						<AiOutlineRight size={15} />
 					</button>
-				</div>
+				</div> */}
 			</Swiper>
 		</div>
 	);

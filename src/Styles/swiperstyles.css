@@ -17,3 +17,11 @@
 }
 
 /* .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet  */
+
+.swiper-button-next {
+    color: black!important;
+  }
+  
+  .swiper-button-prev {
+    color: black!important;
+  }
