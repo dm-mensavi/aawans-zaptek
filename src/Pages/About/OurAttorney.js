@@ -15,7 +15,7 @@ const OurAttorney = () => {
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
-                                className="px-7 py-2 bg-primary inline-block text-white rounded-md"
+                                className="px-7 py-1 bg-primary inline-block text-white rounded-md"
                             >
 								Our Attorney
 							</motion.h2>
