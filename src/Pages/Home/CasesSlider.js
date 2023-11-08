@@ -35,13 +35,14 @@ function CasesSlider() {
 						className="flex flex-col sm:flex-row space-y-5 mb-10 items-left justify-between">
 						<h2 className="h3 md:h2 ">Some Popular Cases</h2>
 
-						<Link to="/cases" className="btn-primary">
+						<Link to="/cases" className="btn-primary mr-10">
 							View All Cases
 						</Link>
 					</motion.div>
 
 					<Swiper
 						slidesPerView={1}
+            spaceBetween={50}
 						breakpoints={{
 							520: {
 								slidesPerView: 2,
@@ -50,10 +51,10 @@ function CasesSlider() {
 								slidesPerView: 3,
 							},
 						}}
-						navigation={true}
-						loop={true}
+            navigation= {true}				
+            loop={true}
 						modules={[Navigation, Pagination, A11y]}
-						className="flex w-full h-full ">
+						className="flex sm:ml-5 w-full h-full ">
 						{caseData.map((cases) => (
               <SwiperSlide>
 							<motion.div
@@ -69,7 +70,7 @@ function CasesSlider() {
 								/>
 								<Link
 									to={`/cases/${cases.id}`}
-									className="text-container text-center rounded-3xl pb-20">
+									className="w-full lg:w-96 text-container text-center rounded-3xl pb-12">
 									<p className="text-white font-serif font-semibold text-3xl pt-44 header-text">
 										{cases.title}
 									</p>

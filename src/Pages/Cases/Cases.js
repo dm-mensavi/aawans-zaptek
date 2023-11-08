@@ -30,7 +30,7 @@ function Cases() {
 							/>
 							<Link
 								to={`/cases/${cases.id}`}
-								className="text-container text-center rounded-2xl pb-20">
+								className="text-container text-center rounded-2xl pb-12">
 								<p className="text-white font-serif font-semibold text-3xl pt-44 header-text">
 									{cases.title}
 								</p>

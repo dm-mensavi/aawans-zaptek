@@ -61,11 +61,11 @@
 @tailwind utilities;
 
 @layer base {
-	.swiper-button-next {
+	/* .swiper-button-next {
 		@apply bg-white !mt-60 !mr-[24%] sm:!mr-[35%] md:!mr-[39%] lg:!mr-[42%] xl:!mr-[43%] p-7 hover:bg-primaryLight cursor-pointer transition-all duration-300  ease-in-out rounded-full mx-3 border-2;
 	}
 
 	.swiper-button-prev {
 		@apply bg-white !mt-60 !ml-[24%] sm:!ml-[35%] md:!ml-[39%] lg:!ml-[42%] xl:!ml-[43%] p-7 hover:bg-primaryLight cursor-pointer transition-all duration-300  ease-in-out rounded-full mx-3 border-2;
-	}
+	} */
 }
