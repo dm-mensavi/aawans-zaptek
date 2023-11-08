@@ -11,6 +11,7 @@ import { practiceStyles } from "../../Styles/HeaderStyle";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "../../Styles/practiceslides.css";
 
 // import required modules
 import { Navigation, Pagination, A11y } from "swiper/modules";

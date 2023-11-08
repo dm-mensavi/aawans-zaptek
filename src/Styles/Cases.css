@@ -2,56 +2,70 @@
 
 /* Card container styles */
 .card-container {
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.3s; /* Add a smooth hover transition */
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.3s; /* Add a smooth hover transition */
 }
 
 /* Text container styles with animation */
 .text-container {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 22px;
-  padding-bottom: 46px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  opacity: 0;
-  transition: top 0.3s, opacity 0.3s; /* Add transition effect for top and opacity */
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 22px;
+	padding-bottom: 46px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+	opacity: 0;
+	transition: top 0.3s, opacity 0.3s; /* Add transition effect for top and opacity */
 }
 
 /* Animation effect on hover */
 .card-container:hover .text-container {
-  top: 0; /* Move the text container into place */
-  opacity: 1; /* Fade in the text on hover */
+	top: 0; /* Move the text container into place */
+	opacity: 1; /* Fade in the text on hover */
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  .card-container {
-    width: 100%;
-  }
+	.card-container {
+		width: 100%;
+	}
 }
 
 .header-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s 0.2s, transform 0.4s 0.2s; /* Added delay of 0.2s */
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.3s 0.2s, transform 0.4s 0.2s; /* Added delay of 0.2s */
 }
 
 .subheading-text {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s 0.4s, transform 0.3s 0.4s; /* Added delay of 0.4s */
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 0.6s 0.4s, transform 0.3s 0.4s; /* Added delay of 0.4s */
 }
 
 .text-container:hover .header-text {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .text-container:hover .subheading-text {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.swiper-button-next {
+		@apply bg-white !mt-60 !mr-[24%] sm:!mr-[35%] md:!mr-[39%] lg:!mr-[42%] xl:!mr-[43%] p-7 hover:bg-primaryLight cursor-pointer transition-all duration-300  ease-in-out rounded-full mx-3 border-2;
+	}
+
+	.swiper-button-prev {
+		@apply bg-white !mt-60 !ml-[24%] sm:!ml-[35%] md:!ml-[39%] lg:!ml-[42%] xl:!ml-[43%] p-7 hover:bg-primaryLight cursor-pointer transition-all duration-300  ease-in-out rounded-full mx-3 border-2;
+	}
 }

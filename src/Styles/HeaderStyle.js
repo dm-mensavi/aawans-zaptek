@@ -1,6 +1,7 @@
 import leftbg from '../public/breadcrumb-shape-1.png'
 import rightbg from '../public/breadcrumb-shape-2.png'
 import practicebg from '../public/practicearea_dot.svg'
+import casesbg from '../public/cases-background.jpg'
 
 export const sectionStyles = {
   background: `url(${leftbg}), url(${rightbg})`,
@@ -22,4 +23,13 @@ export const practiceStyles = {
   backgroundRepeat: 'no-repeat, no-repeat',
   width: '100%',
   height: '600px',
+};
+
+export const casesStyles = {
+  background: `url(${casesbg})`,
+  backgroundColor: "#f9f7f3",
+  backgroundSize: 'auto',
+  backgroundRepeat: 'no-repeat',
+  width: '100%',
+  height: '670px',
 };
