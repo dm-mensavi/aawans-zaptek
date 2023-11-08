@@ -26,7 +26,7 @@ function Cases() {
 							<img
 								src={cases.image}
 								alt={cases.title}
-								className="w-full lg:w-96 rounded-2xl h-80"
+								className="w-full lg:w-96 rounded-2xl h-80 object-cover object-center"
 							/>
 							<Link
 								to={`/cases/${cases.id}`}

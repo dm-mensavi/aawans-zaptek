@@ -14,7 +14,7 @@ function About() {
 	const updateForm = (event) => {
 		const { name, value } = event.target;
 		setSubForm((oldSubForm) => ({
-			...subForm,
+			...oldSubForm,
 			[name]: value,
 		}));
 	};
