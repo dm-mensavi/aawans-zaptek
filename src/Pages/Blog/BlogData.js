@@ -19,7 +19,7 @@ export const BlogData = [
 	},
 	{
 		id: 3,
-		title: "Protecting Your Rights with Breach of Warranty",
+		title: "Protecting Rights with Breach of Warranty",
 		date: "February 16, 2023",
 		image: "blog-details-img-3",
 		category:"Consumer Protection",
