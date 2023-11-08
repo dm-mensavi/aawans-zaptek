@@ -61,10 +61,10 @@ function CasesSlider() {
 								{caseData.map((cases) => (
 									<SwiperSlide>
 										<motion.div
-											/* variants={flipX()} */
+											variants={flipX()} 
 											initial="offscreen"
 											whileInView="onscreen"
-											viewport={{ once: true, amount: 0 }}
+											viewport={{ once: true, amount: 0.5 }}
 											className="relative card-container">
 											<img
 												src={cases.image}

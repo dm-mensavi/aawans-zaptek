@@ -8,6 +8,7 @@ import BlogSubscription from "../About/BlogSubscription";
 import ClientsTestimonial from "../About/ClientsTestimonial";
 import PracticeAreaSlider from "./PracticeAreaSlider";
 import CasesSlider from "./CasesSlider";
+import BlogSection from "./BlogSection";
 
 function Home() {
 	const [subForm, setSubForm] = useState({
@@ -35,6 +36,7 @@ function Home() {
 			<CasesSlider />
 			<ClientsTestimonial />
 			<BlogSubscription subForm={subForm} updateForm={updateForm} class={"about-page-body md:px-10 "} />
+			<BlogSection />
 		</div>
 	);
 }

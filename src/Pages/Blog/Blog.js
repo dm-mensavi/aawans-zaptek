@@ -54,7 +54,7 @@ function Blog() {
                 <h1 className="bg-primary w-fit text-white p-1 px-2 rounded-lg relative z-10 -mt-5 text-center">
                   {item.date}
                 </h1>
-                <h1 className=" text-2xl text-center my-5 h3">{item.title}</h1>
+                <h1 className=" text-2xl text-center mb-3 mt-7 h3">{item.title}</h1>
                 <button className="btn-secondary"> Read More</button>
               </div>
             </div>
