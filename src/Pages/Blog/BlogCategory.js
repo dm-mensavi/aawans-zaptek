@@ -7,18 +7,17 @@ import { motion } from "framer-motion";
 import { flipX } from "../../variants";
 import { useLocation } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import getDataByCategory from "../../components/getFunctions/GetDataByCategory";
 
 
 
 function BlogCategory() {
-  	//Scroll to the top of the page on load
+  //Scroll to the top of the page on load
 	const location = useLocation();
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [location]);
 
-	// get the page category from the route
+	// get the blog category from the route
 	let { category } = useParams();
 
 	// const blogItems = getDataByCategory(BlogData, 'Real-Estate-Disputes');

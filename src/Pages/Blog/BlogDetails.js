@@ -118,40 +118,40 @@ function BlogDetails() {
 					<div>
 						<p className="text-4xl mt-20">Popular Tags:</p>
 						<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-							<p>Agreements</p>
+							<Link  to="/blog-tag/Agreements">Agreements</Link>
 						</div>
 						<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-							<p>Rights & Justice</p>
+							<Link to="/blog-tag/Rights & Justice"  >Rights & Justice</Link>
 						</div>
-						<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-							<p>Consumer Protection</p>
+						<div  className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
+							<Link to="/blog-tag/Consumer Protection">Consumer Protection</Link>
 						</div>
 						<div className="flex">
-							<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-								<p>Legal rights</p>
+							<div   className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
+								<Link to="/blog-tag/Legal Rights" >Legal Rights</Link>
 							</div>
-							<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-								<p>Accident</p>
-							</div>
+							<Link to="/blog-tag/Accidents"  className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
+								<p>Accidents</p>
+							</Link>
 						</div>
 
-						<div>
-							<p className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-								Labour Law
-							</p>
+						<div  >
+							<Link to="/blog-tag/Compensation" className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
+								Compensation
+							</Link>
 						</div>
 
 						<div className="flex">
-							<div>
+							<Link to="/blog-tag/Personal Injury" >
 								<p className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
 									Personal Injury
 								</p>
-							</div>
-							<div>
+							</Link>
+							<Link to="/blog-tag/Labor Law" >
 								<p className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-									Labour Law
+									Labor Law
 								</p>
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>

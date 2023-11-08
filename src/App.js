@@ -39,7 +39,7 @@ export default function App() {
 					<Route path="blog" element={<Blog />} />
 					<Route path="blog/:id" element={<BlogDetails />} />
 					<Route path="blog-category/:category" element={<BlogCategory />} />
-					<Route path="blog/:id/:tag" element={<BlogTag />} />
+					<Route path="blog-tag/:tag" element={<BlogTag />} />
 					<Route path="blogDetails" element={<BlogDetails />} />
 					<Route path="blogCategory" element={<BlogCategory />} />
 					<Route path="contact" element={<Contact />} />
