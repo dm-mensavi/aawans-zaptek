@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import getDataById from "../../GetDataById";
+import getDataById from "../../components/getFunctions/GetDataById";
 import { BlogData } from "./BlogData";
 import Header from "../../components/Header";
 import { Helmet } from "react-helmet";
@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { AiOutlineRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function BlogDetails() {
 	//Scroll to the top of the page on load
@@ -41,26 +42,26 @@ function BlogDetails() {
 					</div>
 					<div>
 						<p className="text-4xl mt-20 mb-5">Post Category:</p>
-						<div className="flex justify-between w-10/12  gap-10 items-center  border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
-							<p>Real Estate Dispute</p>
+						<Link to={`/blog-category/Real Estate Disputes`} className="flex justify-between w-10/12  gap-10 items-center  border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
+							<p>Real Estate Disputes</p>
 							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12 items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
+						</Link>
+						<Link to={`/blog-category/Employment Discrimination`} className="flex justify-between w-10/12 items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
 							<p>Employment Discrimination</p>
 							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12  items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
+						</Link>
+						<Link to={`/blog-category/Consumer Protection`} className="flex justify-between w-10/12  items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
 							<p>Consumer Protection</p>
 							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12  items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
+						</Link>
+						<Link to={`/blog-category/Personal Injury`} className="flex justify-between w-10/12  items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
 							<p>Personal Injury</p>
 							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12 items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
+						</Link>
+						<Link to={`/blog-category/Labor & Employment`} className="flex justify-between w-10/12 items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
 							<p>Labour & Employment</p>
 							<AiOutlineRight />
-						</div>
+						</Link>
 					</div>
 
 					<div>

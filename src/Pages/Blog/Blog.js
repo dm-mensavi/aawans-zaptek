@@ -41,7 +41,7 @@ function Blog() {
 
 
   return (
-    <div className="my-32">
+    <div className="mb-32">
       <Helmet>
         <title>Blog Post - AawAans</title>
       </Helmet>

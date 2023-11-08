@@ -9,8 +9,9 @@ import Attorney from "./Pages/Attorney";
 
 //Blog with sub pages
 import Blog from "./Pages/Blog/Blog";
-import BlogCategory from "./Pages/Blog/BlogCategory";
 import BlogDetails from "./Pages/Blog/BlogDetails";
+import BlogCategory from "./Pages/Blog/BlogCategory";
+import BlogTag from "./Pages/Blog/BlogTag";
 
 //Practice with sub page
 import PracticeArea from "./Pages/PracticeAreas/PracticeArea";
@@ -37,6 +38,8 @@ export default function App() {
 					<Route path="caseDetails" element={<CaseDetails />} />
 					<Route path="blog" element={<Blog />} />
 					<Route path="blog/:id" element={<BlogDetails />} />
+					<Route path="blog-category/:category" element={<BlogCategory />} />
+					<Route path="blog/:id/:tag" element={<BlogTag />} />
 					<Route path="blogDetails" element={<BlogDetails />} />
 					<Route path="blogCategory" element={<BlogCategory />} />
 					<Route path="contact" element={<Contact />} />
