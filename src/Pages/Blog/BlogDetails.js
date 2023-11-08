@@ -2,12 +2,13 @@ import { useParams } from "react-router-dom";
 import getDataById from "../../GetDataById";
 import { BlogData } from "./BlogData";
 import Header from "../../components/Header";
+import PopularTags from './PopularTags'
 import { Helmet } from "react-helmet";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
-import { AiOutlineRight } from "react-icons/ai";
-
+import { FaLinkedinIn,FaFacebookF,FaTwitter,FaSkype } from "react-icons/fa";
+import PostCat from "./PostCat";
 function BlogDetails() {
 	//Scroll to the top of the page on load
 	const location = useLocation();
@@ -33,48 +34,28 @@ function BlogDetails() {
 			<Header pageTitle="Blog Details" name="Blog" />
 
 			{/* Your content and design goes here */}
-			<div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-between items-start w-full gap-10 mt-32 px-[5%]">
-				<div className="lg:max-w-[40%] ">
+			<div className="flex lg:flex-row max-md:flex-col-reverse max-sm:flex-col-reverse justify-between items-start w-full gap-10 mt-32 px-[5%]">
+				<div className="lg:max-w-[40%] max-md:w-full max-sm:w-full ">
 					<div className="flex justify-between items-center shadow-lg w-10/12 p-5">
 						<input placeholder="Search here..." />
 						<FiSearch size={25} />
 					</div>
 					<div>
 						<p className="text-4xl mt-20 mb-5">Post Category:</p>
-						<div className="flex justify-between w-10/12  gap-10 items-center  border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
-							<p>Real Estate Dispute</p>
-							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12 items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
-							<p>Employment Discrimination</p>
-							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12  items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
-							<p>Consumer Protection</p>
-							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12  items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
-							<p>Personal Injury</p>
-							<AiOutlineRight />
-						</div>
-						<div className="flex justify-between w-10/12 items-center border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-slate-100">
-							<p>Labour & Employment</p>
-							<AiOutlineRight />
-						</div>
+						<PostCat />
 					</div>
-
 					<div>
 						<p className="text-4xl mt-20">Recent Post:</p>
-						<div className="flex gap-5 mt-10">
+						<div className="flex gap-5 mt-10 w-full">
 							<img
-								className=""
+								className="min-w-[30%] object-cover"
 								src={require(`../../public/${blogItem.image}.jpg`)}
 								alt=""
 								width={"20%"}
 								height={"100%"}
 							/>
 							<div>
-								<p className="text-xl hover:text-primary cursor-pointer">
+								<p className="text-medium hover:text-primary cursor-pointer">
 									Navigating Landloard/Tenant Dispues
 								</p>
 								<p className="text-primary">Feburary 16, 2020</p>
@@ -83,14 +64,14 @@ function BlogDetails() {
 
 						<div className="flex gap-5 mt-10">
 							<img
-								className=""
+								className="min-w-[30%] object-cover"
 								src={require(`../../public/${blogItem.image}.jpg`)}
 								alt=""
 								width={"20%"}
 								height={"100%"}
 							/>
 							<div>
-								<p className="text-xl hover:text-primary cursor-pointer w-10/12">
+								<p className="text-medium hover:text-primary cursor-pointer w-10/12">
 									Fighting for Your Civil Rights
 								</p>
 								<p className="text-primary">Feburary 16, 2020</p>
@@ -99,14 +80,14 @@ function BlogDetails() {
 
 						<div className="flex gap-5 mt-10">
 							<img
-								className=""
+								className="min-w-[30%] object-cover"
 								src={require(`../../public/${blogItem.image}.jpg`)}
 								alt=""
 								width={"20%"}
 								height={"100%"}
 							/>
 							<div>
-								<p className="text-xl hover:text-primary cursor-pointer w-10/12">
+								<p className="text-medium hover:text-primary cursor-pointer w-10/12">
 									Protecting Your Rights with Breach of Warranty
 								</p>
 								<p className="text-primary">Feburary 16, 2020</p>
@@ -116,45 +97,10 @@ function BlogDetails() {
 
 					<div>
 						<p className="text-4xl mt-20">Popular Tags:</p>
-						<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-							<p>Agreements</p>
-						</div>
-						<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-							<p>Rights & Justice</p>
-						</div>
-						<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-							<p>Consumer Protection</p>
-						</div>
-						<div className="flex">
-							<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-								<p>Legal rights</p>
-							</div>
-							<div className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-								<p>Accident</p>
-							</div>
-						</div>
-
-						<div>
-							<p className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-								Labour Law
-							</p>
-						</div>
-
-						<div className="flex">
-							<div>
-								<p className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-									Personal Injury
-								</p>
-							</div>
-							<div>
-								<p className="border border-slate-100 px-6 py-4 text-xl rounded-lg m-2 cursor-pointer hover:bg-primary hover:text-white w-fit">
-									Labour Law
-								</p>
-							</div>
-						</div>
+							<PopularTags/>
 					</div>
 				</div>
-				<div className="max-w-[60%]">
+				<div className="lg:max-w-[60%] max-md:w-full max-sm:w-full">
 					<div>
 						<img
 							className=""
@@ -290,6 +236,43 @@ function BlogDetails() {
 							nisi ut aliquip ex ea commodo consequat.
 						</p>
 					</div>
+					{/* <div className="flex justify-center flex-start items-center gap-8 bg-primary">
+					<p className="text-2xl">Shared Post:</p>
+					<BiLogoFacebookCircle />
+					<BiLogoLinkedinSquare  />
+					<BiLogoTwitter />
+					<BiLogoSkype />
+					</div> */}
+
+					<div className="flex space-x-4 justify-center items-center ">
+						<p className="text-2xl">Share Post:</p>
+							<div
+								className="w-10 h-10 bg-white hover:bg-primary/70 link-animate cursor-pointer transition-all 
+              duration-300  ease-in-out rounded-full flex items-center justify-center">
+								<FaFacebookF size={12} className=" text-black"></FaFacebookF>
+							</div>
+		
+						
+							<div
+								className="w-10 h-10 bg-white hover:bg-primary/70 link-animate cursor-pointer transition-all 
+              duration-300  ease-in-out rounded-full flex items-center justify-center">
+								<FaTwitter size={12} className=" text-black"></FaTwitter>
+							</div>
+						
+							<div
+								className="w-10 h-10 bg-white hover:bg-primary/70 link-animate cursor-pointer transition-all 
+              duration-300  ease-in-out rounded-full flex items-center justify-center">
+								<FaSkype size={12} className="text-black"></FaSkype>
+							</div>
+						
+							<div
+								className="w-10 h-10 bg-white hover:bg-primary/70 link-animate cursor-pointer transition-all 
+              duration-300  ease-in-out rounded-full flex items-center justify-center">
+								<FaLinkedinIn size={12} className=" text-black"></FaLinkedinIn>
+							</div>
+						
+					</div>
+
 				</div>
 			</div>
 		</div>

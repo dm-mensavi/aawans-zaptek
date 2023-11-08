@@ -47,7 +47,7 @@ function Blog() {
       </Helmet>
       <Header pageTitle="Blog Page" name="Blog" />
 
-      <div className="lg:grid md:grid sm:flex sm:flex-col sm:justify-center sm:items-center lg:grid-cols-3 md:grid-cols-2 gap-5 general-margin">
+      <div className="xl:grid lg:grid md:grid sm:flex sm:flex-col sm:justify-center sm:items-center xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-5 general-margin">
         {currentPosts.map((item, index) => (
           <Link key={index} to={`/blog/${item.id}`}>
             <motion.div
