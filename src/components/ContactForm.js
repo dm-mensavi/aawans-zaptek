@@ -135,10 +135,10 @@ const ContactForm = () => {
             viewport={{ once: true, amount: 0 }}
         >
             <button
-                className='font-bold bg-primary text-white py-4 px-2 w-full rounded-lg hover:bg-[#9b6627] [#89B4E5] transition'
+                className='btn-primary mx-auto'
                 onClick={handleSubmit}
             >
-                Message us
+                Send Message
             </button>
         </motion.div>
     </form>
