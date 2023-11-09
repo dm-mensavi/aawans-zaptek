@@ -35,7 +35,7 @@ function BlogDetails() {
 			<Helmet>
 				<title>{blogItem.title} - AawAans</title>
 			</Helmet>
-			<Header pageTitle={blogItem.title} name="Blog" />
+			<Header pageTitle="Blog Details" name="Blog" />
 
 			{/* Your content and design goes here */}
 			<div className="flex lg:flex-row max-md:flex-col-reverse max-sm:flex-col-reverse justify-between items-start w-full gap-3 md:gap-10 mt-32 px-[2%] md:px-[5%] ">

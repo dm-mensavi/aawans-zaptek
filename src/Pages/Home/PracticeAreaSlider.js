@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { practiceAreaData } from "../PracticeAreas/PracticeAreaData";
-import { AiOutlineRight } from "react-icons/ai";
-import { AiOutlineLeft } from "react-icons/ai";
 import { flipX, fadeIn } from "../../variants";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { practiceStyles } from "../../Styles/HeaderStyle";
 
 // Import Swiper styles
@@ -17,7 +15,6 @@ import "../../Styles/practiceslides.css";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 
 function PracticeAreaSlider() {
-	const swiper = useSwiper();
 
 	return (
 		<div style={practiceStyles} className="mb-[400px]">
@@ -100,19 +97,6 @@ function PracticeAreaSlider() {
 						</motion.div>
 					</SwiperSlide>
 				))}
-				{/* Custom buttons */}
-				{/* <div className="flex justify-center my-10">
-					<button
-						onClick={() => swiper.slidePrev()}
-						className=" hover:bg-primaryLight cursor-pointer transition-all duration-300  ease-in-out rounded-full p-5 mx-3 border-2">
-						<AiOutlineLeft size={15} />
-					</button>
-					<button
-						onClick={() => swiper.slideNext()}
-						className=" hover:bg-primaryLight  cursor-pointer transition-all duration-300  ease-in-out rounded-full p-5 mx-3 border-2">
-						<AiOutlineRight size={15} />
-					</button>
-				</div> */}
 			</Swiper>
 		</div>
 						</div>

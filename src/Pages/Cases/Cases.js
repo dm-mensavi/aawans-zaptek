@@ -1,13 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../../components/Header";
 import { Helmet } from "react-helmet";
 import { caseData } from "./CasesData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { flipX } from "../../variants";
+import { useLocation } from "react-router-dom";
 import "../../Styles/Cases.css";
 
 function Cases() {
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
+
 	return (
 		<div>
 			<Helmet>

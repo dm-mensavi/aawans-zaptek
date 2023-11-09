@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import { BlogData } from "../Blog/BlogData";
 
 function BlogSection() {
-
-  const trimedPosts = BlogData.slice(0, 2);
+	const trimedPosts = BlogData.slice(0, 2);
 
 	return (
 		<div className="flex flex-col justify-center lg:flex-row w-[95%] lg:w-[90%] xl:w-[80%] mx-auto my-32">
@@ -55,21 +54,31 @@ function BlogSection() {
 			</div>
 			{/* column two */}
 			<div className="flex flex-col items-center justify-between sm:space-x-8 sm:flex-row ">
-      {trimedPosts.map((item, index) => (
-          <Link key={index} to={`/blog/${item.id}`}>
-            <div className="bg-white rounded-lg w-fit p-3 shadow-md my-5 min-h-[400px] max-h-[100%]  hover:shadow-lg hover:shadow-primary pb-10">
-              <div className="relative w-80 lg:w-60 xl:w-80 flex flex-col justify-center items-center">
-                <img src={require(`../../public/${item.image}.jpg`)} alt={item.title} />
-                <h1 className="bg-primary w-fit text-white p-1 px-2 rounded-lg relative z-10 -mt-5 text-center">
-                  {item.date}
-                </h1>
-                <h1 className=" text-2xl text-center mb-3 mt-7 h3">{item.title}</h1>
-                <button className="btn-secondary"> Read More</button>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+				{trimedPosts.map((item, index) => (
+					<Link key={index} to={`/blog/${item.id}`}>
+						<motion.div
+							variants={flipX()}
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true, amount: 0 }}
+							className="bg-white rounded-lg w-fit p-3 shadow-md my-5 min-h-[400px]  hover:shadow-lg hover:shadow-primary pb-10">
+							<div className="relative w-[100%] lg:w-60 xl:w-80 flex flex-col justify-center items-center">
+								<img
+									src={require(`../../public/${item.image}.jpg`)}
+									alt={item.title}
+								/>
+								<h1 className="bg-primary w-fit text-white p-1 px-2 rounded-lg relative z-10 -mt-5 text-center">
+									{item.date}
+								</h1>
+								<h1 className=" text-2xl text-center mb-3 mt-7 h3">
+									{item.title}
+								</h1>
+								<button className="btn-secondary"> Read More</button>
+							</div>
+						</motion.div>
+					</Link>
+				))}
+			</div>
 		</div>
 	);
 }

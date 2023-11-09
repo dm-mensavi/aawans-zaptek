@@ -28,6 +28,7 @@ function Home() {
 			<Helmet>
 				<title>Home - AawAans</title>
 			</Helmet>
+			
 			<HeroSection />
 			<Features />
 			<AboutUs />

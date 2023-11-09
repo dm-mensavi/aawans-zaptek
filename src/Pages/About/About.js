@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import AboutIntro from "./AboutIntro";
 import OurAttorney from "./OurAttorney";
 import BlogSubscription from "./BlogSubscription";
 import ClientsTestimonial from "./ClientsTestimonial";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
+
 
 function About() {
+
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
+
 	const [subForm, setSubForm] = useState({
 		email: "",
 	});

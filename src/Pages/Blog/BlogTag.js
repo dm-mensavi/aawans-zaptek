@@ -19,9 +19,7 @@ function BlogTag() {
 	let { tag } = useParams();
 
 	// const blogItems = getDataByCategory(BlogData, 'Real-Estate-Disputes');
-	const blogItems = BlogData.filter((item) =>
-		item.tags.includes(tag)
-	);
+	const blogItems = BlogData.filter((item) => item.tags.includes(tag));
 
 	return (
 		<div className="mb-32">
@@ -38,7 +36,7 @@ function BlogTag() {
 							initial="offscreen"
 							whileInView="onscreen"
 							viewport={{ once: true, amount: 0 }}
-							className="bg-white rounded-lg w-fit p-3 shadow-md my-5 max-h-[100%] hover:shadow-lg pb-10">
+							className="bg-white rounded-lg w-fit p-3 shadow-md my-5 min-h-[400px] max-h-[100%]  hover:shadow-lg hover:shadow-primary pb-10">
 							<div className="relative w-fit flex flex-col justify-center items-center">
 								<img
 									src={require(`../../public/${item.image}.jpg`)}
@@ -47,7 +45,7 @@ function BlogTag() {
 								<h1 className="bg-primary w-fit text-white p-1 px-2 rounded-lg relative z-10 -mt-5 text-center">
 									{item.date}
 								</h1>
-								<h1 className="font-semibold text-xl text-center my-10 ">
+								<h1 className=" text-2xl text-center mb-3 mt-7 h3">
 									{item.title}
 								</h1>
 								<button className="btn-secondary"> Read More</button>

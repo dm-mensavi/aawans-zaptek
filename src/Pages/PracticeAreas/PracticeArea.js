@@ -5,8 +5,16 @@ import { Link } from "react-router-dom";
 import { practiceAreaData } from "./PracticeAreaData";
 import { flipX } from "../../variants";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function PracticeArea() {
+
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
+
 	return (
 		<div>
 			<Helmet>
