@@ -1,12 +1,20 @@
-import React from 'react'
 import Header from '../components/Header'
 import { Helmet } from "react-helmet";
 import ContactForm from '../components/ContactForm';
 import { fadeIn } from '../variants';
 import { motion } from "framer-motion";
 import Map from '../components/Map';
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Contact() {
+
+  	//Scroll to the top of the page on load
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
+
   return (
     <div className='contact-page-body'>
       <Helmet>

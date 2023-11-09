@@ -1,10 +1,16 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import nopage from "../../src/public/404.svg";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Nopage() {
+		//Scroll to the top of the page on load
+		const location = useLocation();
+		useEffect(() => {
+			window.scrollTo(0, 0);
+		}, [location]);
 	return (
 		<div>
 			<Helmet>
