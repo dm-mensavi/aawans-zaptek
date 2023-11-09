@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import ContactForm from '../components/ContactForm';
 import { fadeIn } from '../variants';
 import { motion } from "framer-motion";
+import Map from '../components/Map';
 
 function Contact() {
   return (
@@ -38,6 +39,8 @@ function Contact() {
           </div>
 
           <ContactForm />
+
+          <Map />
         </div>
       </section>
     </div>

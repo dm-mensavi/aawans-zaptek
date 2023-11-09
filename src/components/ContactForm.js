@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { fadeIn } from '../variants';
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,9 +27,15 @@ const ContactForm = () => {
   return (
     <form className='lg:col-span-2'>
         <div className='md:grid md:grid-cols-2 md:gap-5'>
-            <div className='mb-8'>
+            <motion.div 
+                variants={fadeIn("up", 0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                className='mb-8'
+            >
                 <input
-                    className='mt-[8px] placeholder:text-[#333] border w-full block p-5 rounded-lg focus:outline-primary'
+                    className='mt-[8px] placeholder:text-[#333] border w-full block p-5 rounded-lg focus:outline-primary transition'
                     type='text'
                     name='firstname'
                     id='firstname'
@@ -36,26 +44,38 @@ const ContactForm = () => {
                     required
                     placeholder="First name: "
                 />
-            </div>
+            </motion.div>
 
-            <div className='mb-8'>            
-            <input
-                className='mt-[8px] placeholder:text-[#333] border w-full block p-5 rounded-lg focus:outline-primary'
-                type='email'
-                name='email'
-                id='email'
-                value={formData.email}
-                onChange={updateForm}
-                required
-                placeholder="Email:"
-            />
-        </div>
+            <motion.div 
+                variants={fadeIn("up", 0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                className='mb-8'
+            >            
+                <input
+                    className='mt-[8px] placeholder:text-[#333] border w-full block p-5 rounded-lg focus:outline-primary transition'
+                    type='email'
+                    name='email'
+                    id='email'
+                    value={formData.email}
+                    onChange={updateForm}
+                    required
+                    placeholder="Email:"
+                />
+            </motion.div>
         </div>
 
         <div className='md:grid md:grid-cols-2 md:gap-5'>
-            <div className='mb-8'>            
+            <motion.div 
+                variants={fadeIn("up", 0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                className='mb-8'
+            >            
                 <input
-                    className='mt-[8px] placeholder:text-[#333] border w-full block p-5 rounded-lg focus:outline-primary'
+                    className='mt-[8px] placeholder:text-[#333] border w-full block p-5 rounded-lg focus:outline-primary transition'
                     type='tel'
                     name='phonenumber'
                     id='phonenumber'
@@ -64,11 +84,17 @@ const ContactForm = () => {
                     required
                     placeholder="Phone:"
                 />
-            </div>
+            </motion.div>
 
-            <div className='mb-8'>
+            <motion.div 
+                variants={fadeIn("up", 0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                className='mb-8'
+            >
                     <select 
-                        className='mt-[8px] text-[#333] border w-full block p-5 rounded-lg focus:outline-primary'
+                        className='mt-[8px] text-[#333] border w-full block p-5 rounded-lg focus:outline-primary transition'
                         name='subject'
                         id='subject'
                         value={formData.subject}
@@ -80,12 +106,18 @@ const ContactForm = () => {
                         <option value={'secondChoice'}>Second Choice</option>
                         <option value={'thirdChoice'}>Third Choice</option>
                     </select>
-            </div>
+            </motion.div>
         </div>
         
-        <div className='mb-8'>
+        <motion.div 
+            variants={fadeIn("up", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            className='mb-8'
+        >
             <textarea
-                className='mt-[8px] placeholder:text-[#333] border block w-full h-44 p-5 outline-5 rounded-lg focus:outline-primary'
+                className='mt-[8px] placeholder:text-[#333] border block w-full h-44 p-5 outline-5 rounded-lg focus:outline-primary transition'
                 name='message'
                 id='message'
                 value={formData.message}
@@ -94,14 +126,21 @@ const ContactForm = () => {
                 placeholder="Write your message..."
             >
             </textarea>
-        </div>
+        </motion.div>
 
-        <button
-            className='font-bold bg-primary text-white py-4 px-2 w-full rounded-lg hover:bg-[#1E3A8A] hover:text-[#89B4E5] transition'
-            onClick={handleSubmit}
+        <motion.div
+            variants={fadeIn("up", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
         >
-            Message us
-        </button>
+            <button
+                className='font-bold bg-primary text-white py-4 px-2 w-full rounded-lg hover:bg-[#9b6627] [#89B4E5] transition'
+                onClick={handleSubmit}
+            >
+                Message us
+            </button>
+        </motion.div>
     </form>
   )
 }
