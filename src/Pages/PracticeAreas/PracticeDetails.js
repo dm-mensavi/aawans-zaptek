@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import getDataById from "../../GetDataById";
+import getDataById from "../../components/getFunctions/GetDataById";
 import { practiceAreaData } from "./PracticeAreaData";
 import Header from "../../components/Header";
 import { Helmet } from "react-helmet";

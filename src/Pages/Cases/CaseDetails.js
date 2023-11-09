@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import getDataById from "../../GetDataById";
+import getDataById from "../../components/getFunctions/GetDataById";
 import { caseData } from "./CasesData";
 import Header from "../../components/Header";
 import { Helmet } from "react-helmet";
