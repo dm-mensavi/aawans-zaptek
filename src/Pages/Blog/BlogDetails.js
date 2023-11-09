@@ -35,12 +35,12 @@ function BlogDetails() {
 			<Helmet>
 				<title>{blogItem.title} - AawAans</title>
 			</Helmet>
-			<Header pageTitle="Blog Details" name="Blog" />
+			<Header pageTitle={blogItem.title} name="Blog" />
 
 			{/* Your content and design goes here */}
 			<div className="flex lg:flex-row max-md:flex-col-reverse max-sm:flex-col-reverse justify-between items-start w-full gap-3 md:gap-10 mt-32 px-[2%] md:px-[5%] ">
 				<div className="lg:max-w-[40%] max-md:w-full max-sm:w-full ">
-					<div className="flex justify-between items-center shadow-lg w-10/12 p-5">
+					<div className="flex justify-between items-center shadow-lg w-full p-5">
 						<input placeholder="Search here..." />
 						<FiSearch size={25} />
 					</div>

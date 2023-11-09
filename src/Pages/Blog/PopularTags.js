@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
  const tags = [
     {
     id: 1,
@@ -5,7 +7,7 @@
 },
 {
     id: 2,
-    name: 'Rights and justice'
+    name: 'Rights & Justice'
 },
 {
     id: 3,
@@ -13,11 +15,11 @@
 },
 {
     id: 4,
-    name: 'Local right'
+    name: 'Legal Rights'
 },
 {
     id: 5,
-    name: 'Accident'
+    name: 'Accidents'
 },
 {
     id: 6,
@@ -30,7 +32,7 @@
 },
 {
     id: 8,
-    name: 'Labour law'
+    name: 'Labor Law'
 },
 ]
 
@@ -38,9 +40,9 @@
 const PopularTags = () => {
     const tag = tags.map((item)=> (
         
-		<div key={item.id} className="flex-1 border border-slate-100 lg:px-6 md:px-2 py-2 text-medium rounded-lg m-1 md:m-2 hover:bg-primary hover:text-white w-fit cursor-pointer transition-all duration-300  ease-in-out">
+		<Link key={item.id}  to={`/blog-tag/${item.name}`}  className="flex-1 border border-slate-100 lg:px-6 md:px-2 py-2 text-medium rounded-lg m-1 md:m-2 hover:bg-primary hover:text-white w-fit cursor-pointer transition-all duration-300  ease-in-out">
 			<p className="w-fit">{item.name}</p>
-		</div>
+		</Link>
        
         
     ))
