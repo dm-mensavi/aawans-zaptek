@@ -10,9 +10,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../../Styles/Cases.css";
+import 'swiper/css/scrollbar';
 import "../../Styles/practiceslides.css";
 // import required modules
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 function CasesSlider() {
 	return (
@@ -53,13 +54,14 @@ function CasesSlider() {
 									slidesPerView: 3,
 								},
 							}}
+							noSwiping
 							navigation= {true}				
 							loop={true}
-							modules={[Navigation, Pagination, A11y]}
-							className="flex sm:ml-5 w-full h-full col-span-10 md:col-span-7 lg:col-span-8 order-2"
+							modules={[Navigation]}
+							className="swiper-no-swiping flex sm:ml-5 w-full h-full col-span-10 md:col-span-7 lg:col-span-8 order-2"
 							>
 								{caseData.map((cases) => (
-									<SwiperSlide>
+									<SwiperSlide key={cases.caseName}>
 										<motion.div
 											variants={flipX()} 
 											initial="offscreen"
