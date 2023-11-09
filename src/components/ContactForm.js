@@ -25,7 +25,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form className='lg:col-span-2 w-full'>
+    <form className='lg:col-span-2'>
         <div className='md:grid md:grid-cols-2 md:gap-5'>
             <motion.div 
                 variants={fadeIn("up", 0.5, 0)}
