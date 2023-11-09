@@ -8,6 +8,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { FaLinkedinIn,FaFacebookF,FaTwitter,FaSkype } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import PostCat from "./PostCat";
 
 function BlogDetails() {
@@ -52,7 +53,7 @@ function BlogDetails() {
 						<p className="h3 text-4xl mt-20">Recent Post:</p>
 					
 						{recentPost.map((item, index) => (
-						<div key={index} className="flex items-center gap-5 mt-10 w-full">
+						<Link key={index} to={`/blog/${item.id}`} className="flex items-center gap-5 mt-10 w-full">
 							<img
 								className="w-[100px]  h-[100px] rounded-full object-cover"
 								src={require(`../../public/${item.image}.jpg`)}
@@ -66,7 +67,7 @@ function BlogDetails() {
 								</p>
 								<p className="text-primary">{item.date}</p>
 							</div>
-						</div>	))};	
+						</Link>	))};	
 					</div>
 
 					<div>

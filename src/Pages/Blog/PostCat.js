@@ -1,5 +1,7 @@
 import {BiChevronRight} from 'react-icons/bi'
-const cat = [
+import {Link} from 'react-router-dom'
+
+const blogCategories = [
     {
         id: 1,
         name: 'Real Estate Dispute',
@@ -25,11 +27,11 @@ const cat = [
 
 
 const PostCat = () => {
-    const Category = cat.map((item)=> (
-		<div key={item.id} className="flex justify-between w-10/12  gap-10 items-center  border border-slate-100 px-6 py-4 text-medium rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-primaryLight/20 transition-all duration-300  ease-in-out">
+    const Category = blogCategories.map((item)=> (
+		<Link key={item.id} to={`/blog/${item.id}`} className="flex justify-between w-10/12  gap-10 items-center  border border-slate-100 px-6 py-4 text-medium rounded-lg m-2 cursor-pointer hover:border-primary hover:border hover:bg-primaryLight/20 transition-all duration-300  ease-in-out">
 			<p className="w-fit">{item.name}</p>
             <BiChevronRight />
-		</div>
+		</Link>
     ))
             
   return (
