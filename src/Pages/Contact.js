@@ -15,7 +15,8 @@ function Contact() {
       <Header pageTitle="Contact Us" name="Contact Us" />
       
       <section className='py-14 md:py-36 md:px-10'>
-        <div className='section-content px-4 sm:px-14 md:px-24'>
+        <div className='section-content px-4 sm:px-14 md:px-24 max'>
+          <div></div>
           <div className="section-header text-center mb-20">
             <motion.h2
               variants={fadeIn("up", 0.5, 0)}
